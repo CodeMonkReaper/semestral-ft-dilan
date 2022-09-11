@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -16,7 +17,7 @@ const routes: Routes = [
           children: [
             {
               path: '',
-              loadChildren: () => import('../tabs/perfil/perfil.module').then(m => m.PerfilPageModule)
+              loadChildren: () => import('../pages/perfil/perfil.module').then(m => m.PerfilPageModule)
             }
           ]
         },
@@ -25,7 +26,7 @@ const routes: Routes = [
           children: [
             {
               path: '',
-              loadChildren: () => import('../tabs/conductores/conductores.module').then(m => m.ConductoresPageModule)
+              loadChildren: () => import('../pages/conductores/conductores.module').then(m => m.ConductoresPageModule)
             }
           ]
         },
@@ -34,7 +35,7 @@ const routes: Routes = [
           children: [
             {
               path: '',
-              loadChildren: () => import('../tabs/mapa/mapa.module').then(m => m.MapaPageModule)
+              loadChildren: () => import('../pages/mapa/mapa.module').then(m => m.MapaPageModule)
             }
           ]
         },
